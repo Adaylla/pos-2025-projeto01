@@ -54,7 +54,7 @@ def boletim():
         return redirect(url_for("boletim", periodo=periodo))
 
     if request.method == "GET":
-        periodo = request.args.get("periodo", "2024.1")
+        periodo = request.args.get("periodo", "2025.1")
 
     ano_letivo, periodo_letivo = periodo.split(".")
 

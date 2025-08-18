@@ -62,14 +62,13 @@ def boletim():
     boletim = suap_user.get_boletim(ano_letivo, periodo_letivo)
     periodos = suap_user.get_periodos()
 
-    context = {
-        "user": user,
-        "boletim": boletim,
-        "periodos": periodos,
-        "selected_periodo": periodo
-    }
-
-    return render_template("boletim.html", context=context)
+    return render_template(
+        "boletim.html",
+        user=user,
+        boletim_data=boletim,
+        periodos=periodos,
+        selected_periodo=periodo
+    )
 
 
 @app.route('/login/')

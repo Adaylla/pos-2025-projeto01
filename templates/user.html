@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Perfil do Usuário{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+	<div class="col-md-7 col-lg-6 col-12">
+		<div class="card shadow-lg border-0">
+			<div class="card-body text-center py-4">
+				<div class="d-flex justify-content-center mb-3">
+					<img src="{{ user.url_foto_150x200 or user.avatar_url or 'https://github.com/mdo.png' }}" alt="Foto do SUAP" class="rounded-circle border border-3" style="width: 140px; height: 140px; object-fit: cover;">
+				</div>
+				<h3 class="card-title mb-2 fw-bold">{{ user.nome_usual }}</h3>
+				<div class="row justify-content-center">
+					<div class="col-md-10 col-12">
+						<ul class="list-group list-group-flush text-start">
+							<li class="list-group-item"><strong>Matrícula:</strong> {{ user.matricula }}</li>
+							<li class="list-group-item"><strong>CPF:</strong> {{ user.cpf }}</li>
+							<li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+							<li class="list-group-item"><strong>Curso:</strong> {{ user.vinculo.curso }}</li>
+							<li class="list-group-item"><strong>Campus:</strong> {{ user.vinculo.campus }}</li>
+							<li class="list-group-item"><strong>Situação:</strong> {{ user.vinculo.situacao }}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

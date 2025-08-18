@@ -1,10 +1,43 @@
 # Projeto da Unidade 02 de POS
-- Data de entrega: **13/08/2025**
-- Sem prorrogações!
 
-## Instruções
-- Sigam as instruções da tarefa no slide: https://dvcirilo-ifrn.github.io/pos/slides/aula13.html#17
-- Apenas um repositório por dupla.
-
-## Equipe
+## Aluna
 - Adaylla Alannis
+
+## Instalação
+
+Siga os seguintes passos para rodar o projeto localmente.
+
+- Crie um ambiente virtual
+
+```bash
+python -m venv .venv
+```
+
+- Ative o ambiente virtual
+
+*powershell*
+```powershell
+.venv/Scripts/activate
+```
+
+- Instale as dependências do projeto
+
+```bash
+pip install -r requirements.txt
+```
+
+- Crie um arquivo `.env` e adicione as informações da API do SUAP
+
+```
+SECRET_KEY='development'
+CLIENT_ID= <seu client id>
+CLIENT_SECRET= <seu client secret>
+```
+
+- Rode o servidor
+
+```bash
+flask run
+```
+
+---
